@@ -29,7 +29,7 @@
 
 4. Run the script,
 
-         ./setup.sh.
+         ./setup.sh
 
 5. You should see a terraformk8s directory listed. The directory contains all files mentioned in above. 
 
