@@ -16,7 +16,7 @@
 
 ## Instructions
 
-### Pre-Requirements
+### Prerequisites
 1. Create Service Principle, **copy the output**
    
           az ad sp create-for-rbac --name <EnterName>
