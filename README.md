@@ -14,8 +14,22 @@
    
           az ad sp create-for-rbac --name <EnterName>
    
-3. Create SSH Keys.
+2. Create SSH Keys.
 
           ssh-keygen -m PEM -t rsa -b 4096
    
+### Enviroment Setup
+1. Run the following cmd to pull the setup file:
+
+         wget https://raw.githubusercontent.com/esolace88/Staging/main/setup.sh
+
+2. Make the file executable, Run:
+
+         chmod +x setup.sh
+
+4. Run the script,
+
+         ./setup.sh.
+
+5. You should see a terraformk8s directory listed. The directory contains all files mentioned in above. 
 
