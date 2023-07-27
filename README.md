@@ -39,16 +39,19 @@
          ./setup.sh
 
 5. You should see a terraformk8s directory listed. The directory contains all files mentioned in above.
-6. Change into the "terraformk8s" directory and modify the following files:
+6.  Run the following CMD to initiate terraform:
 
-- providers.tf: Remove "#" on both name and location, and enter the respected values of your resource group. use the following cmd to pull the data **use wq! to save the file**:
+         terraform init
+    
+7. Change into the "terraformk8s" directory and modify the following files, use the following cmd to replace required fields:
 
-      az group list
+         az group list
   
-- aks.tf: No action is needed, unless modification is needed to the enviroment.
-- variables.tf: Replace placeholders for resource group locaiton, service principle ID and Secret
+- **providers.tf**: Remove "#" on both name and location, and enter the respected values of your resource group. 
+- **aks.tf**: No action is needed, unless modification is needed to the enviroment.
+- **variables.tf**: Replace placeholders for resource group location, service principle ID and Secret
 
-7. Run the following cmd to import the subscription ID to terraform, to get ID use **az group list**:
+8. Run the following cmd to import the subscription ID to terraform, to get ID use **az group list**:
 
          terraform import azurerm_resource_group.k8s <paste Subscription ID, no commas>
 
