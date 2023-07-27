@@ -1,4 +1,4 @@
-# This is quick access repo for project development
+# For quick access to a project
 
 ## Enviroment Details
 
