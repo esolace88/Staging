@@ -13,7 +13,9 @@
 1. Create Service Principle, **copy the output**
    
           az ad sp create-for-rbac --name <EnterName>
-2. Create SSH Keys.
+   
+3. Create SSH Keys.
 
           ssh-keygen -m PEM -t rsa -b 4096
+   
 
