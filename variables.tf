@@ -11,11 +11,11 @@ variable "ssh_public_key" {
 }
 
 variable "dns_prefix" {
-    default = "k8sguru"
+    default = "k8sproject"
 }
 
 variable cluster_name {
-      default = "k8sguru"
+      default = "k8sproject"
 }
 
 variable aks_service_principal_app_id {
