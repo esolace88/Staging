@@ -11,7 +11,9 @@
 
 ### Pre-Requirements
 1. Create Service Principle, **copy the output**
-     az ad sp create-for-rbac --name <EnterName>
+   
+          az ad sp create-for-rbac --name <EnterName>
 2. Create SSH Keys.
-     ssh-keygen -m PEM -t rsa -b 4096
+
+          ssh-keygen -m PEM -t rsa -b 4096
 
