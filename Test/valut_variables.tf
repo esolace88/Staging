@@ -1,7 +1,19 @@
+## ADD Variables for providers
+
 variable "resource_group_name" {
   description = "Default resource group name that the network will be created in"
   default     = ""
 }
+
+variable "resource_group_location" {
+  default = ""
+}
+
+variable "tenant_id" {
+  description = "tenant ID of subscription"
+  default = ""
+}
+
 
 variable "location" {
   description = "The location/region where the core network will be created."
