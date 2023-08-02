@@ -1,11 +1,23 @@
+# Import Resouces
+
+resource "azurerm_resource_group" "keyvault" {
+  name = var.resource_group_name
+  location = var.resource_group_location
+}
+
+# Gather Data on resources
+
+data "azurerm_resource_group" "test" {
+  name = var.resource_group_name
+}
+
+# Create resource
+
 resource "random_string" "password" {
   length  = 16
   special = false
 }
 
-data "azurerm_resource_group" "test" {
-  name = var.resource_group_name
-}
 
 resource "azurerm_key_vault" "keyvault" {
   name                            = var.key_vault_name
@@ -13,9 +25,9 @@ resource "azurerm_key_vault" "keyvault" {
   enabled_for_disk_encryption     = true
   enabled_for_deployment          = true
   enabled_for_template_deployment = true
-  location                        = data.azurerm_resource_group.test.location
+  location                        = "${azurerm_resource_group.keyvault.location}"
   sku_name                        = "standard"
-  tenant_id                       = data.azurerm_client_config.current.tenant_id
+  tenant_id                       = var.tenant_id
   soft_delete_enabled             = true
   soft_delete_retention_days      = 90
    
@@ -23,7 +35,7 @@ resource "azurerm_key_vault" "keyvault" {
 
 resource "azurerm_key_vault_access_policy" "myPolicy" {
   key_vault_id = azurerm_key_vault.keyvault.id
-  tenant_id    = data.azurerm_client_config.current.tenant_id
+  tenant_id    = var.tenant_id
   object_id    = data.azurerm_client_config.current.object_id
   
   key_permissions = [
