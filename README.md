@@ -1,4 +1,4 @@
-# Heading
+
 # For quick access to a project
 
 ## Enviroment Details
@@ -26,7 +26,7 @@
 
           ssh-keygen -m PEM -t rsa -b 4096
    
-# Enviroment Setup
+### Enviroment Setup
 1. Run the following cmd to pull the setup file:
 
          wget https://raw.githubusercontent.com/esolace88/Staging/main/setup.sh
@@ -89,4 +89,3 @@
          kubectl get nodes
 
 
-[enviroment setup](#enviromentsetup)
