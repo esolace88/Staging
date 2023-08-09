@@ -89,4 +89,4 @@
          kubectl get nodes
 
 
-[go to heading](#heading)
+[instructions](#Instructions)
