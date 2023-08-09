@@ -89,4 +89,4 @@
          kubectl get nodes
 
 
-[instructions](#enviromentsetup)
+[enviroment setup](#enviromentsetup)
